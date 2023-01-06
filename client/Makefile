@@ -1,7 +1,7 @@
 CXX=g++ 
 RM=rm
-CXXFLAGS=
-LIBS=
+CXXFLAGS=$(shell pkg-config --cflags gstreamer-1.0)
+LIBS=$(shell pkg-config --libs gstreamer-1.0)
 
 SOURCES=$(wildcard *.cpp)
 OBJECTS=$(SOURCES:.cpp=.o)
